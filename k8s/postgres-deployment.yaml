@@ -27,3 +27,7 @@ spec:
               subPath: postgres
           env:
             - name: PGPASSWORD # POSTGRES_PASSWORD
+              valueFrom:
+                secretKeyRef:
+                  name: pgpassword
+                  key: PGPASSWORD
